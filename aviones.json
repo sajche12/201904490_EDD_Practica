@@ -1,0 +1,46 @@
+[
+    {
+        "vuelo": "A100",
+        "numero_de_registro": "N12345",
+        "modelo": "Boeing 737",
+        "fabricante": "Boeing",
+        "ano_fabricacion": 2015,
+        "capacidad": 180,
+        "peso_max_despegue": 79000,
+        "aerolinea": "Airlinex",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A101",
+        "numero_de_registro": "A54321",
+        "modelo": "Airbus 320",
+        "fabricante": "Airbus",
+        "ano_fabricacion": 2018,
+        "capacidad": 150,
+        "peso_max_despegue": 77000,
+        "aerolinea": "Airliney",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A102",
+        "numero_de_registro": "M23456",
+        "modelo": "Boeing 745",
+        "fabricante": "Boeing",
+        "ano_fabricacion": 2016,
+        "capacidad": 170,
+        "peso_max_despegue": 78000,
+        "aerolinea": "Airlinez",
+        "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A103",
+        "numero_de_registro": "Q98765",
+        "modelo": "Laddin 098",
+        "fabricante": "Laddin",
+        "ano_fabricacion": 2020,
+        "capacidad": 200,
+        "peso_max_despegue": 80000,
+        "aerolinea": "Airlinew",
+        "estado": "Mantenimiento"
+    }
+]

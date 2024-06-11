@@ -1,0 +1,4 @@
+digraph PilaEquipaje {
+    node [shape=record];
+    pila [label="{Pila de Equipaje | }"];
+}

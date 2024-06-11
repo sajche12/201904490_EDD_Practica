@@ -1,0 +1,7 @@
+digraph ListaPasajeros {
+    P12345678 [label="John Doe\nEstados Unidos\nA100\n12\nNew York\nLos Angeles\n2"];
+    P98765432 [label="Jane Smith\nReino Unido\nA200\n5\nLondres\nParis\n1"];
+    P34567890 [label="Ahmed Al-Farsi\nEmiratos Arabes Unidos\nA789\n1\nDubai\nNew York\n3"];
+    P23456789 [label="Liu Wei\nChina\nA789\n8\nBeijing\nSan Francisco\n1"];
+    P45678901 [label="Carlos Rodríguez\nMexico\nA900\n23\nCiudad de Mexico\nMiami\n0"];
+}

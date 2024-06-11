@@ -107,6 +107,71 @@ public:
         }
         std::cout << std::endl;
     }
+
+    // Metodo para obtener el tamaño de la lista
+    int obtenerTamano() const {
+        int tamano = 0;
+        Node<T>* actual = cabeza;
+        while (actual != nullptr) {
+            tamano++;
+            actual = actual->siguiente;
+        }
+        return tamano;
+    }
+
+    // Metodo para obtener un elemento de la lista
+    T obtenerElemento(int pos) const {
+        if (pos < 0 || pos >= obtenerTamano()) {
+            throw std::out_of_range("Posición inválida");
+        }
+        Node<T>* actual = cabeza;
+        for (int i = 0; i < pos; i++) {
+            actual = actual->siguiente;
+        }
+        return actual->dato;
+    }
+
+    // Metodo para ordenar ascendentemente por numero de vuelo
+    void ordenarPorNumeroDeVuelo() {
+        if (cabeza == nullptr) {
+            return;
+        }
+
+        Node<T>* actual = cabeza;
+        while (actual->siguiente != nullptr) {
+            Node<T>* siguiente = actual->siguiente;
+            while (siguiente != nullptr) {
+                if (actual->dato.getVuelo() > siguiente->dato.getVuelo()) {
+                    T temp = actual->dato;
+                    actual->dato = siguiente->dato;
+                    siguiente->dato = temp;
+                }
+                siguiente = siguiente->siguiente;
+            }
+            actual = actual->siguiente;
+        }
+    }
+
+    // Metodo para ordenar ascendentemente por numero de asiento
+    void ordenarPorNumeroDeAsiento() {
+        if (cabeza == nullptr) {
+            return;
+        }
+
+        Node<T>* actual = cabeza;
+        while (actual->siguiente != nullptr) {
+            Node<T>* siguiente = actual->siguiente;
+            while (siguiente != nullptr) {
+                if (actual->dato.getAsiento() > siguiente->dato.getAsiento()) {
+                    T temp = actual->dato;
+                    actual->dato = siguiente->dato;
+                    siguiente->dato = temp;
+                }
+                siguiente = siguiente->siguiente;
+            }
+            actual = actual->siguiente;
+        }
+    }
 };
 
 #endif // LISTA_DOBLE_ENLAZADA_H

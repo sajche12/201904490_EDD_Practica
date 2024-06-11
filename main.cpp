@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstdlib>
 #include "listaCircularDoble.h"
 #include "cola.h"
 #include "pila.h"
@@ -10,7 +11,6 @@
 #include "pasajero.h"
 #include "jsoncpp.cpp"
 #include "json/json.h"
-#include <cstdlib>
 
 using namespace std;
 
@@ -23,6 +23,8 @@ void reportes();
 void reporte_aviones_disponibles();
 void reporte_aviones_mantenimiento();
 void reporte_cola_pasajeros();
+void reporte_pila_equipaje();
+void lista_pasajeros();
 
 // Variables globales
 ListaCircularDoble<Avion> listaAvionesDisponible;
@@ -189,12 +191,13 @@ void cargar_movimientos() {
                 if (pasajero.getEquipajeFacturado() > 0) {
                     equipajePasajeros.apilar(pasajero);
                     listaEquipaje.insertarAlInicio(pasajero);
+                    
+                    
                     cout << "El pasajero " << pasajero.getNombre() << " con número de pasaporte " << pasajero.getNumeroDePasaporte() << " tiene equipaje facturado." << endl;
                 } else if (pasajero.getEquipajeFacturado() == 0){
                     listaEquipaje.insertarAlInicio(pasajero);
+                    
                     cout << "El pasajero " << pasajero.getNombre() << " con número de pasaporte " << pasajero.getNumeroDePasaporte() << " no tiene equipaje facturado." << endl;
-                    // Ordenar los pasajeros por orden de vuelo y asiento
-
                 }
             } else if (linea.find("MantenimientoAviones,Ingreso,") == 0) {
                 string cambioEstado = "Mantenimiento";
@@ -244,6 +247,19 @@ void cargar_movimientos() {
         file.close();
     } else {
         cout << "No se pudo abrir el archivo " << endl;
+        }
+    // Verificar si el pasajero tiene el mismo numero de vuelo y si es asi ordenar por asiento
+    if (listaEquipaje.obtenerTamano() > 1) {
+        for (int i = 0; i < listaEquipaje.obtenerTamano() - 1; i++) {
+            Pasajero pasajeroActual = listaEquipaje.obtenerElemento(i);
+            Pasajero pasajeroSiguiente = listaEquipaje.obtenerElemento(i + 1);
+            if (pasajeroActual.getVuelo() == pasajeroSiguiente.getVuelo()) {
+                listaEquipaje.ordenarPorNumeroDeAsiento();
+            } else if (pasajeroActual.getVuelo() != pasajeroSiguiente.getVuelo()) {
+                // Ordenar los pasajeros por orden de vuelo
+                listaEquipaje.ordenarPorNumeroDeVuelo();
+            } 
+        }
     }
 }
 
@@ -300,15 +316,13 @@ void reportes() {
                 reporte_cola_pasajeros();
                 break;
             case 4:
-                cout << "\nEquipaje de Pasajeros:" << endl;
-                
-                cout << endl;
+                reporte_pila_equipaje();
                 break;
             case 5:
-                cout << "Saliendo..." << endl;
+                lista_pasajeros();
                 break;
             case 6:
-                cout << "Saliendo..." << endl;
+                cout << "Regresando..." << endl;
                 break;
             default:
                 cout << "Opción no válida. Inténtalo de nuevo." << endl;
@@ -363,4 +377,40 @@ void reporte_cola_pasajeros() {
 
     // Genera la imagen utilizando Graphviz
     system("dot -Tpng cola_pasajeros.dot -o cola_pasajeros.png");
+}
+
+void reporte_pila_equipaje() {
+    ofstream file("pila_equipaje.dot");
+    file << "digraph PilaEquipaje {" << endl;
+    // Recorre la pila de equipaje y los imprime en el archivo .dot utiliza un while para recorrer la pila, agrega todos los atributos
+    file << "    node [shape=record];" << endl;
+    file << "    pila [label=\"{Pila de Equipaje | ";
+    Pila<Pasajero> aux = equipajePasajeros;
+    while (!aux.estaVacia()) {
+        Pasajero pasajero = aux.cimaPila();
+        file << "<" << pasajero.getNumeroDePasaporte() << "> " << pasajero.getNombre() << " | ";
+        aux.desapilar();
+    }
+    file << "}\"];" << endl;
+    file << "}" << endl;
+
+    file.close();
+
+    // Genera la imagen utilizando Graphviz
+    system("dot -Tpng pila_equipaje.dot -o pila_equipaje.png");
+}
+
+void lista_pasajeros() {
+    ofstream file("lista_pasajeros.dot");
+    file << "digraph ListaPasajeros {" << endl;
+    // Recorre la lista de pasajeros y los imprime en el archivo .dot utiliza un for para recorrer la lista, agrega todos los atributos
+    for (int i = 0; i < listaEquipaje.obtenerTamano(); i++) {
+        Pasajero pasajero = listaEquipaje.obtenerElemento(i);
+        file << "    " << pasajero.getNumeroDePasaporte() << " [label=\"" << pasajero.getNombre() << "\\n" << pasajero.getNacionalidad() << "\\n" << pasajero.getVuelo() << "\\n" << pasajero.getAsiento() << "\\n" << pasajero.getDestino() << "\\n" << pasajero.getOrigen() << "\\n" << pasajero.getEquipajeFacturado() << "\"];" << endl;
+    }
+    file << "}" << endl;
+    file.close();
+
+    // Genera la imagen utilizando Graphviz
+    system("dot -Tpng lista_pasajeros.dot -o lista_pasajeros.png");
 }

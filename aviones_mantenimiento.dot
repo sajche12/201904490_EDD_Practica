@@ -1,5 +1,6 @@
 digraph AvionesMantenimiento {
-    N13579 [label="N13579\nBoeing 777\nBoeing\n2012\n396\n351000\nAirlineX"];
-    N24680 [label="N24680\nAirbus A380\nAirbus\n2010\n853\n560000\nAirlineW"];
+    N15485 [label="N15485\nBoeing 462\nBoeing\n2011\n964\n480000\nAirlineB"];
+    N38554 [label="N38554\nBoeing 301\nBoeing\n2009\n774\n500000\nAirlineX"];
     N12345 [label="N12345\nBoeing 737\nBoeing\n2015\n180\n79000\nAirlineX"];
+    N02475 [label="N02475\nAirbus A211\nAirbus\n2012\n850\n640000\nAirlineL"];
 }

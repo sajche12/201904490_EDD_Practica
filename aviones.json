@@ -53,5 +53,60 @@
         "peso_max_despegue": 560000,
         "aerolinea": "AirlineW",
         "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A200",
+        "numero_de_registro": "N74852",
+        "modelo": "Airbus A210",
+        "fabricante": "Airbus",
+        "ano_fabricacion": 2014,
+        "capacidad": 950,
+        "peso_max_despegue": 600000,
+        "aerolinea": "AirlineM",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A122",
+        "numero_de_registro": "N15485",
+        "modelo": "Boeing 462",
+        "fabricante": "Boeing",
+        "ano_fabricacion": 2011,
+        "capacidad": 964,
+        "peso_max_despegue": 480000,
+        "aerolinea": "AirlineB",
+        "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A333",
+        "numero_de_registro": "N38554",
+        "modelo": "Boeing 301",
+        "fabricante": "Boeing",
+        "ano_fabricacion": 2009,
+        "capacidad": 774,
+        "peso_max_despegue": 500000,
+        "aerolinea": "AirlineX",
+        "estado": "Mantenimiento"
+    },
+    {
+        "vuelo": "A789",
+        "numero_de_registro": "N02475",
+        "modelo": "Airbus A211",
+        "fabricante": "Airbus",
+        "ano_fabricacion": 2012,
+        "capacidad": 850,
+        "peso_max_despegue": 640000,
+        "aerolinea": "AirlineL",
+        "estado": "Disponible"
+    },
+    {
+        "vuelo": "A534",
+        "numero_de_registro": "N61199",
+        "modelo": "Airbus A720",
+        "fabricante": "Airbus",
+        "ano_fabricacion": 2013,
+        "capacidad": 398,
+        "peso_max_despegue": 490000,
+        "aerolinea": "AirlineP",
+        "estado": "Disponible"
     }
 ]

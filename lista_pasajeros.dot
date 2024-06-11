@@ -1,6 +1,12 @@
 digraph ListaPasajeros {
+    P34567891 [label="Dario Casas\nGuatemala\nA003\n5\nOrlando\nLos Angeles\n4"];
     P12345678 [label="John Doe\nEstados Unidos\nA100\n12\nNew York\nLos Angeles\n2"];
+    P33479810 [label="Mario Rodríguez\nCosta Rica\nA122\n10\nDetroit\nLos Angeles\n1"];
     P98765432 [label="Jane Smith\nReino Unido\nA200\n5\nLondres\nParis\n1"];
+    P34875201 [label="Maria Solis\nBrasil\nA333\n16\nBuenos Aires\nMadrid\n5"];
+    P17829844 [label="Laura Lopez\nMexico\nA385\n20\nBerlin\nGuatemala\n2"];
+    P84552016 [label="Pablo Morales\nPanama\nA534\n22\nWashington\nLondres\n4"];
+    P65842016 [label="Joshua Morales\nArgentina\nA664\n12\nLondres\nMilan\n3"];
     P34567890 [label="Ahmed Al-Farsi\nEmiratos Arabes Unidos\nA789\n1\nDubai\nNew York\n3"];
     P23456789 [label="Liu Wei\nChina\nA789\n8\nBeijing\nSan Francisco\n1"];
     P45678901 [label="Carlos Rodríguez\nMexico\nA900\n23\nCiudad de Mexico\nMiami\n0"];

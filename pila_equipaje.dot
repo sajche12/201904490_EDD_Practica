@@ -1,4 +1,4 @@
 digraph PilaEquipaje {
     node [shape=record];
-    pila [label="{Pila de Equipaje | }"];
+    pila [label="{Pila de Equipaje | <P33479810> Mario Rodríguez | <P84552016> Pablo Morales | <P34875201> Maria Solis | <P17829844> Laura Lopez | <P65842016> Joshua Morales | <P34567891> Dario Casas | <P34567890> Ahmed Al-Farsi | <P23456789> Liu Wei | <P98765432> Jane Smith | <P12345678> John Doe | }"];
 }

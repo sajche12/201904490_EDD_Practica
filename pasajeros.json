@@ -50,12 +50,103 @@
         "equipaje_facturado": 3
     },
     {
-        "nombre": "Diego Sajche",
+        "nombre": "Dario Casas",
         "nacionalidad": "Guatemala",
         "numero_de_pasaporte": "P34567891",
-        "vuelo": "A987",
-        "asiento": 7,
+        "vuelo": "A003",
+        "asiento": 5,
+        "destino": "Orlando",
+        "origen": "Los Angeles",
+        "equipaje_facturado": 4
+    },
+    {
+        "nombre": "Joshua Morales",
+        "nacionalidad": "Argentina",
+        "numero_de_pasaporte": "P65842016",
+        "vuelo": "A664",
+        "asiento": 12,
+        "destino": "Londres",
+        "origen": "Milan",
+        "equipaje_facturado": 3
+    },
+    {
+        "nombre": "Laura Lopez",
+        "nacionalidad": "Mexico",
+        "numero_de_pasaporte": "P17829844",
+        "vuelo": "A385",
+        "asiento": 20,
+        "destino": "Berlin",
+        "origen": "Guatemala",
+        "equipaje_facturado": 2
+    },
+    {
+        "nombre": "Maria Solis",
+        "nacionalidad": "Brasil",
+        "numero_de_pasaporte": "P34875201",
+        "vuelo": "A333",
+        "asiento": 16,
+        "destino": "Buenos Aires",
+        "origen": "Madrid",
+        "equipaje_facturado": 5
+    },
+    {
+        "nombre": "Pablo Morales",
+        "nacionalidad": "Panama",
+        "numero_de_pasaporte": "P84552016",
+        "vuelo": "A534",
+        "asiento": 22,
+        "destino": "Washington",
+        "origen": "Londres",
+        "equipaje_facturado": 4
+    },
+    {
+        "nombre": "Mario Rodríguez",
+        "nacionalidad": "Costa Rica",
+        "numero_de_pasaporte": "P33479810",
+        "vuelo": "A122",
+        "asiento": 10,
+        "destino": "Detroit",
+        "origen": "Los Angeles",
+        "equipaje_facturado": 1
+    },
+    {
+        "nombre": "Andrea Roque",
+        "nacionalidad": "Italia",
+        "numero_de_pasaporte": "P14875210",
+        "vuelo": "A003",
+        "asiento": 2,
+        "destino": "Bangkok",
+        "origen": "Milan",
+        "equipaje_facturado": 0
+    },
+    {
+        "nombre": "Sam Carter",
+        "nacionalidad": "Estados Unidos",
+        "numero_de_pasaporte": "P44210056",
+        "vuelo": "A445",
+        "asiento": 18,
+        "destino": "San Jose",
+        "origen": "Barcelona",
+        "equipaje_facturado": 3
+    },
+    {
+        "nombre": "Pedro Avila",
+        "nacionalidad": "Nicaragua",
+        "numero_de_pasaporte": "P32001548",
+        "vuelo": "A200",
+        "asiento": 21,
+        "destino": "Guatemala",
+        "origen": "Miami",
+        "equipaje_facturado": 0
+    },
+    {
+        "nombre": "Miriam Lopez",
+        "nacionalidad": "Mexico",
+        "numero_de_pasaporte": "P77221496",
+        "vuelo": "A655",
+        "asiento": 3,
         "destino": "Madrid",
-        "origen": "Miami"
+        "origen": "Miami",
+        "equipaje_facturado": 3
     }
 ]

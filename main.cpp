@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstdlib>
 #include "listaCircularDoble.h"
 #include "cola.h"
 #include "pila.h"
@@ -323,9 +322,10 @@ void reportes() {
                 break;
             case 6:
                 cout << "Regresando..." << endl;
-                break;
+                return;
             default:
                 cout << "Opción no válida. Inténtalo de nuevo." << endl;
+                break;
         }
 
     } while (opcion_reporte != 6);
@@ -343,7 +343,10 @@ void reporte_aviones_disponibles() {
     file.close();
 
     // Genera la imagen utilizando Graphviz
-    system("dot -Tpng aviones_disponibles.dot -o aviones_disponibles.png");
+    if (system("dot -Tpng aviones_disponibles.dot -o aviones_disponibles.png") != 0) {
+        cerr << "Error al ejecutar el comando Graphviz" << endl;
+        std::exit(EXIT_FAILURE); // Termina el programa si el comando falla
+    }
 }
 
 void reporte_aviones_mantenimiento() {

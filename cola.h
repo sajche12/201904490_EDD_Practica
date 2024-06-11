@@ -77,6 +77,18 @@ public:
         }
         return frente->valor;
     }
+
+    // Metodo para obtener un elemento en la cola
+    T obtenerElemento(int pos) const {
+        if (pos < 0 || pos >= tamano) {
+            throw std::out_of_range("Posición inválida");
+        }
+        Nodo* actual = frente;
+        for (int i = 0; i < pos; i++) {
+            actual = actual->siguiente;
+        }
+        return actual->valor;
+    }
 };
 
 #endif // COLA_H

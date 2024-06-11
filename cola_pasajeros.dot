@@ -1,0 +1,4 @@
+digraph ColaPasajeros {
+    node [shape=record];
+    cola [label="{Cola de Pasajeros | <0> John Doe | <1> Jane Smith | <2> Carlos Rodríguez | <3> Liu Wei | <4> Ahmed Al-Farsi | <5> Diego Sajche | }"];
+}

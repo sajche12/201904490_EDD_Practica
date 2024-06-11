@@ -1,0 +1,4 @@
+digraph AvionesDisponibles {
+    N54321 [label="N54321\nAirbus A320\nAirbus\n2018\n150\n77000\nAirlineY"];
+    N67890 [label="N67890\nBoeing 787\nBoeing\n2020\n242\n254000\nAirlineZ"];
+}

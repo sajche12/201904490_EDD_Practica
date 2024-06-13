@@ -347,6 +347,9 @@ void reporte_aviones_disponibles() {
         cerr << "Error al ejecutar el comando Graphviz" << endl;
         std::exit(EXIT_FAILURE); // Termina el programa si el comando falla
     }
+
+    // Abrir la imagen generada
+    system("aviones_disponibles.png");
 }
 
 void reporte_aviones_mantenimiento() {
@@ -362,6 +365,9 @@ void reporte_aviones_mantenimiento() {
 
     // Genera la imagen utilizando Graphviz
     system("dot -Tpng aviones_mantenimiento.dot -o aviones_mantenimiento.png");
+
+    // Abrir la imagen generada
+    system("aviones_mantenimiento.png");
 }
 
 void reporte_cola_pasajeros() {
@@ -380,6 +386,9 @@ void reporte_cola_pasajeros() {
 
     // Genera la imagen utilizando Graphviz
     system("dot -Tpng cola_pasajeros.dot -o cola_pasajeros.png");
+
+    // Abrir la imagen generada
+    system("cola_pasajeros.png");
 }
 
 void reporte_pila_equipaje() {
@@ -401,6 +410,9 @@ void reporte_pila_equipaje() {
 
     // Genera la imagen utilizando Graphviz
     system("dot -Tpng pila_equipaje.dot -o pila_equipaje.png");
+
+    // Abrir la imagen generada
+    system("pila_equipaje.png");
 }
 
 void lista_pasajeros() {
@@ -416,4 +428,7 @@ void lista_pasajeros() {
 
     // Genera la imagen utilizando Graphviz
     system("dot -Tpng lista_pasajeros.dot -o lista_pasajeros.png");
+
+    // Abrir la imagen generada
+    system("lista_pasajeros.png");
 }
